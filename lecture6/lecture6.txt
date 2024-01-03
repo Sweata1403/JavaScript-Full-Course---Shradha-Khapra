@@ -1,0 +1,86 @@
+Window Object:
+
+The window object represents an open window in a browser. It is browser's object (not JavaScript's)
+& is automatically created by browser.
+It is a global object with lots of properties & methods.
+
+What is DOM?
+
+When a web page is loaded, the browser creates a Document Object Model (DOM) of the page.
+                            window
+                               |
+                               |
+                               |
+                            Document
+                               |
+                               |
+                               |
+                              HTML
+                              .   .
+                            .       .
+                          .           .
+                        .               .
+                      Head             Body
+                    . . .  .             .  .
+                .   .    .   .           .    .
+            .     .       .    .         .      .
+        meta |  meta  | title |link    |div|   |script| 
+                                    .  .  . .
+                                .   .      .  .
+                            .    .          .   .
+                        img  |  h1          p | div
+
+basically hum jitna bhi html code likhte hain, wo saare k saare code hum javascript file me access kr skte hain.
+-> html k jitne bhi tags hain wo automatically javascript k andar aakr ek object k andr convert hojata hain, aur us special object ko 
+   hum naam dete hain "document", aur ye "document" available hota hain humare window object k upar.
+-> Hum DOM ko use krte hain dynamic changes/manipulation k liye.
+
+//note: console.dir-> humari special object hoti hain, like "document" object, ye use uski properties and methods ko print krwane k kaam 
+                    aata hain.//
+
+**DOM Manipulation:**
+
+1.Selecting with id
+ /document.getElementByld("myld")\
+ -> id returns an Element object representing the element whose id property matches the specified string. 
+ Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly
+
+2.Selecting with class
+/document.getElementsByClassName("myClass")\
+-> it is very similar to array as it returns html collection
+
+3.Selecting with tag
+/document.getElementsByTagName("p")\    
+
+4.Query Selector
+-> query selector returns NodeList to us
+/document.querySelector("myld / myClass / tag")\
+//returns first element
+/document.querySelectorAll"myld / myClass / tag'")\
+//returns a NodeList
+
+
+Properties:
+-> in properties k basis par hum value ko get bhi karskte hain, value ko set bhi kar skte hain(means change krskte hain),
+   use update bhi kar skte hain!
+
+• tagName: returns tag for element nodes
+• innerText: returns the text content of the element and all its children
+• innerHTML: returns the plain text or HTML contents in the element
+• textContent: returns textual content even for hidden elements
+
+homework: read about the followings inside the brackets also read about three types of node, i.e., text, comment, and element
+
+                                    |BODY|
+                                      |
+                                      |     [firstchild, lastchild]
+                                    |DIV|  -------------------------->{bodychildren[0]}     
+                                  .   .  .   
+                                .     .     .
+                             .        .         .
+                            |img|   |img|      |h1|
+                              |       |          |
+                    [firstchild]      |     [lastchild]
+                    {divchildren[0]}  |   {divchildren[2]}
+                                      |
+                                {divchildren[1]}

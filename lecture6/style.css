@@ -1,4 +1,12 @@
-*{
-    box-sizing: border-box;
-    background-color: aqua;
+
+.heading{
+    color: blue;
+    background-color: yellow;
+}
+body{
+    background-color: pink;
+}
+button{
+    background-color: burlywood;
+    color: azure;
 }
